@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="BankingDomain" parallel="tests">
+	<test name="Test1" allow-return-values="true">
+		<classes>
+			<class name="testLayer.RegisterTest"/>
+			<class name="testLayer.LoginTest"/>
+			<class name="testLayer.ForgotInfoTest"/>
+			<class name="testLayer.AccountOverviewTest" />
+			<class name="testLayer.OpenNewAccTest"/>
+			<class name="testLayer.TransferFundsTest"/>
+			<class name="testLayer.BillPayTest"/>
+			<class name="testLayer.FindTransactionsTest"/>
+			<class name="testLayer.UpdateContactInfoTest"/>
+			<class name="testLayer.LoanRequestTest"/>
+		</classes>
+	</test>
+	
+
+
+</suite>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [BankingDomain]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Test1(failed)">
+    <classes>
+      <class name="testLayer.TransferFundsTest">
+        <methods>
+          <include name="TransferFunds_InvalidToAcc" invocation-numbers="0"/>
+          <include name="TransferFunds_InvalidAmount"/>
+          <include name="initsetup"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- testLayer.TransferFundsTest -->
+      <class name="testLayer.LoginTest">
+        <methods>
+          <include name="Login_InvalidPassword" invocation-numbers="0"/>
+          <include name="close"/>
+          <include name="initsetup"/>
+          <include name="Login_InvalidUnregisteredIdpass" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testLayer.LoginTest -->
+      <class name="testLayer.ForgotInfoTest">
+        <methods>
+          <include name="ForgotLogin_Valid" invocation-numbers="0"/>
+          <include name="initsetup"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- testLayer.ForgotInfoTest -->
+      <class name="testLayer.UpdateContactInfoTest">
+        <methods>
+          <include name="UpdateContactInfo_Updatedata" invocation-numbers="0"/>
+          <include name="initsetup"/>
+          <include name="after"/>
+          <include name="UpdateContactInfo_Verifypopulatedata" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testLayer.UpdateContactInfoTest -->
+      <class name="testLayer.BillPayTest">
+        <methods>
+          <include name="after"/>
+          <include name="initsetup"/>
+          <include name="BillPay_InvalidAccountno" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- testLayer.BillPayTest -->
+      <class name="testLayer.RegisterTest">
+        <methods>
+          <include name="Register_invalidPhoneno" invocation-numbers="0 1"/>
+          <include name="Register_valid" invocation-numbers="0"/>
+          <include name="Register_invalidwithNumber" invocation-numbers="0"/>
+          <include name="close"/>
+          <include name="Register_invalidSSn" invocation-numbers="0 1 2"/>
+          <include name="Register_invalidwithSpace" invocation-numbers="0"/>
+          <include name="initsetup"/>
+          <include name="Register_invalidEmpty"/>
+          <include name="Register_invalidPin" invocation-numbers="0 1"/>
+          <include name="Register_invalidwithSpecialCharacter" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testLayer.RegisterTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [BankingDomain] -->
